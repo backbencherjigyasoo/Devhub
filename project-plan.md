@@ -71,6 +71,17 @@ Public developer profiles (e.g., `/user/gaurav-srivastava`) displaying developer
    - Build a static preview mode using **Static Site Generation (SSG)** via static parameters generation (`generateStaticParams`).
    - Use **Server-Side Rendering (SSR)** for standard user profiles to dynamically load visitor stats.
 4. **Route Handlers**: Create an endpoint at `app/api/users/[username]/route.ts` that yields JSON information (simulating a public endpoint for a developer's resume).
+5. **🎯 Bonus — All Three Dynamic Segment Types Side-by-Side** _(covers `[slug]`, `[...slug]`, `[[...slug]]`)_
+   - Build a DevHub Docs section to compare all three patterns in one place:
+     ```
+     app/docs/[slug]/page.js          →  /docs/getting-started   (single segment)
+     app/docs/deep/[...slug]/page.js  →  /docs/deep/a/b/c        (catch-all, depth 1+)
+     app/docs/[[...slug]]/page.js     →  /docs AND /docs/a/b/c   (optional catch-all, depth 0+)
+     ```
+   - Inside each page, `console.log(params)` to observe how Next.js passes the segment value differently:
+     - `[slug]` → `params = { slug: "getting-started" }`
+     - `[...slug]` → `params = { slug: ["a", "b", "c"] }` (always an **array**)
+     - `[[...slug]]` → `params = { slug: undefined }` when at root, array when nested
 
 ---
 
