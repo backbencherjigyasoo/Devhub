@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DevHub
+
+An interview-prep and practice platform for developers, built to help engineers sharpen their skills with structured, topic-wise interview questions.
+
+## About
+
+DevHub organizes technical interview questions into a clean, navigable format so developers can practice efficiently instead of hunting through scattered blog posts and PDFs. The goal is to make interview prep structured, searchable, and genuinely useful — not just another list.
+
+## Features
+
+- Curated, topic-wise interview questions for developers
+- Clean, fast browsing experience built on Next.js App Router
+- Actively evolving — new topics and features are being added regularly
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** JavaScript
+- **Styling:** CSS
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚧 DevHub is under active development. Planned improvements are tracked in `project-plan.md` and `road.md`.
 
-## Learn More
+## Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+See [`road.md`](./road.md) for upcoming features and milestones.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This is currently a personal project, but suggestions and feedback are welcome via Issues.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is open source and available for personal and educational use.
