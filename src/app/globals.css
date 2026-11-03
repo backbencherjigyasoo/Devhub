@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #f4f4f5;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -10,13 +11,6 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
@@ -40,3 +34,92 @@ body {
 .page-enter {
   animation: pageEnter 0.35s ease-out both;
 }
+
+/* ─── Clean Design System Utilities (Senior Architect Standard) ─── */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 shadow-md shadow-orange-500/20 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-zinc-300 bg-zinc-900 border border-zinc-700 hover:border-zinc-500 hover:text-white transition-all cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors cursor-pointer;
+  }
+
+  .card {
+    @apply p-5 rounded-xl bg-zinc-900/60 border border-zinc-800 backdrop-blur-sm transition-all;
+  }
+
+  .input-label {
+    @apply block text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-1.5;
+  }
+
+  .input-field {
+    @apply w-full px-3.5 py-2 rounded-lg bg-zinc-900 border border-zinc-700/80 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-zinc-800 border border-zinc-700 text-zinc-300;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .hero-heading {
+    @apply text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight;
+  }
+
+  .hero-subtitle {
+    @apply mt-5 text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed;
+  }
+
+  .feature-card {
+    @apply p-6 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-all;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent;
+  }
+}
+
+/* ─── Clerk Modal High-Contrast Text Overrides ────────────────── */
+.cl-modalBackdrop,
+.cl-userProfile-root,
+.cl-userButtonPopoverCard,
+.cl-signIn-root,
+.cl-card {
+  color: #f4f4f5 !important;
+}
+
+.cl-headerTitle,
+.cl-profileSectionTitleText,
+.cl-userPreviewMainIdentifier,
+.cl-navbarButton,
+.cl-formButtonPrimary {
+  color: #ffffff !important;
+}
+
+.cl-headerSubtitle,
+.cl-profileSectionSubtitle,
+.cl-userPreviewSecondaryIdentifier,
+.cl-profileSectionContent,
+.cl-formFieldLabel,
+.cl-identityPreviewText,
+.cl-breadcrumbsItem {
+  color: #e4e4e7 !important; /* High contrast light-gray */
+}
+
+/* Fix dim nested text */
+.cl-userProfile-root span,
+.cl-userProfile-root p,
+.cl-userProfile-root h1,
+.cl-userProfile-root h2,
+.cl-userProfile-root h3 {
+  opacity: 1 !important;
+}
+
+
