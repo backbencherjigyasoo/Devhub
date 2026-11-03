@@ -33,11 +33,11 @@ A simple, meaningful platform: **Upload your resume -> Generate an instant portf
 - [x] Connect live database URL in `.env.local` (Neon Postgres).
 
 ### Phase 4: Public Portfolio View (`/[username]`) & Sharing
-- [ ] Dynamic Server Component route: `app/[username]/page.js`.
-- [ ] Clean, aesthetic portfolio layout with dark/light theme support.
-- [ ] 1-click "Copy Share Link" and "Download PDF" features.
-- [ ] Dynamic OpenGraph metadata for rich social link previews.
+- [x] Dynamic Server Component route: `app/[username]/page.js`.
+- [x] Clean, aesthetic portfolio layout with dark/light theme support.
+- [x] 1-click "Copy Share Link" and "Download PDF" features.
+- [x] Dynamic OpenGraph metadata for rich social link previews.
 
 ### Phase 5: Production Hardening & Vercel Deploy
-- [ ] Vercel deployment with environment variables.
-- [ ] Permanent custom domain mapping (optional).
+- [x] Vercel deployment with environment variables.
+- [x] Permanent custom domain mapping (optional).
